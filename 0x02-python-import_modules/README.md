@@ -73,3 +73,12 @@ There is also an option to import all the function from a module by using the ch
 	>>> display()
 
 ### dir()
+
+dir() is a built in function that lists all the function names within a module and displays them in a sorted list. However this function does not find a list of builtin functions like; "open", "ord", "str", etc. but rather you'll need to use dir() and the argument "builtins" to list all of these functions.
+
+Using the example above "names.py", if a user were to run python and import "names", then use "dir(names)", it will list the essential functions and the ones the user has defined.
+
+	>>> dir(names)
+	>>> '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'display', 'add'
+
+as you can see, the last two names are of those that were personally defined, the others are all essential functions.
