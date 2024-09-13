@@ -38,7 +38,23 @@ This is how to import a module in a script and in the python interpreter (>>>)
 	interpreter:
 	>>> import names
 
-There are variants of the import statement that allows different interactions with modules. For example, you can import a select number of functions from a module. This means that the module itself will not be defined within the scope of the script and any other function will not be accessible. Using the keyword "from" will allow the user to extract the functions they need.
+There are variants of the import statement that allows different interactions with a module. For example, you can import the whole module or a select number of functions from a module. When importing a function from a module this means that the module itself will not be defined within the scope of the script and any other function will not be accessible. Using the keyword "from" will allow the user to extract the functions they need.
+
+Here is how to import a module and use the functions within it:
+
+Example: non-interactive
+
+	filename: addition.py
+
+	#!/usr/bin/python3
+	import names
+	
+	a = 2
+	b = 3
+
+	print("{}".format(names.add(a,b)))
+
+You'll notice that when using a function from a module, you'll need to reference it with the function name "names.add(a, b)". There is an alternative option to access a single function in the module by importing it from the module.
 
 	interpreter:
 
@@ -61,7 +77,7 @@ There is an option to typedef a modules name to which ever name you'd like using
 
 	# This will have the same result as the previous example and print the list in names
 
-This doesnt only apply to the module, but to the functions within the module as well.
+This doesn't only apply to the module, but to the functions within the module as well.
 
 	>>> from names import add as addition
 	>>> print("{}".format(addition(1,2))
