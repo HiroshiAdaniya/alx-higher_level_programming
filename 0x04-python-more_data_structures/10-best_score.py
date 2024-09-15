@@ -2,7 +2,7 @@
 def best_score(a_dictionary):
     highest_score = 0
     student = ""
-    if a_dictionary is None:
+    if a_dictionary is None or not a_dictionary:
         return None
     for i, j in a_dictionary.items():
         if j > highest_score:
