@@ -14,7 +14,8 @@ def roman_to_int(roman_string):
     total_sum = 0
     prev_value = 0
 
-    if roman_string is None or not roman_string:
+    if (roman_string is None or not roman_string
+            or not isinstance(roman_string, str)):
         return 0
     for i in reversed(roman_string):
         index = roman_dictionary[i]
